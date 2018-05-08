@@ -1,13 +1,12 @@
-const unirest = require('unirest');
-const cheerio = require('cheerio');
+import unirest from 'unirest';
+import cheerio from 'cheerio';
 
-function parsePost (url, elems) {
+async function parsePost (url, elems) {
 
-    unirest.get(url)
+    await unirest.get(url)
     .end(function(response){
         const body = response.body;
         const $ = cheerio.load(body);
-        //console.log($);
         const title = $(elems.title).text().trim();
         const image = elems.domen + $(elems.image).attr('src');
         const text = $(elems.text).text().trim();

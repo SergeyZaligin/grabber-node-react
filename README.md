@@ -8,3 +8,9 @@
     }
   ]
 </pre>
+<p>
+  babel index.js --out-dir dist
+</p>
+<p>
+  node dist/index
+</p>

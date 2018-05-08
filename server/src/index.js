@@ -1,5 +1,5 @@
-const parsePost = require('./parsePost');
-const config = require('./config');
+import parsePost from './parsePost';
+import { elems } from './config';
 
 //url: 'https://www.riadagestan.ru/news/president/vladimir_vasilev_pozdravil_rabotnikov_otrasli_svyazi_dagestana_s_dnem_radio/',
 
@@ -9,5 +9,5 @@ const config = require('./config');
 
 parsePost (
     'http://grozny-inform.ru/news/politic/95747/', 
-    config.elems.groznyInform
+    elems.groznyInform
 );

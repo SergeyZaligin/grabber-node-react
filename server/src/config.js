@@ -22,6 +22,6 @@ const elems = {
     }
 }
 
-module.exports = {
+export  {
     elems
 }
